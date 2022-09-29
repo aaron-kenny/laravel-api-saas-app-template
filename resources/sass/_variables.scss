@@ -1,0 +1,38 @@
+$font-weight__jumbotron-title: 700;
+$font-weight__section-title: 500;
+$font-weight__button: 500;
+$font-weight__nav-link: 500;
+
+// COLORS
+$bg-base       : #1f1f1f;
+$bg-nav        : #1d1d1d; // Navigations, footers, and side menues
+$bg-card       : #262626;
+
+$color-dark    : #424242;
+
+$dark-100   : #1f1f1f;
+$dark-200   : #1c1c1c;
+$dark-300   : #191919;
+$light-100  : #fff;
+$light-200  : #f5f5f5;
+$light-300  : #d3d3d3; // Headings
+$light-400  : #8f8f8f;
+$light-500  : #636363; // Paragraphs
+$light-600  : #363636; // Table borders
+
+$danger-100 : #ed5a5a; // Danger buttons or errors
+
+.bg-dark-1 {
+    background-color: darken($bg-base, .5%);
+}
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1300px
+);

@@ -1,0 +1,32 @@
+// Kapax variables
+@import "variables";
+
+// Required Bootstrap
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// Optional Bootstrap
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// Kapax styles
+@import "base";
+@import "page";
+
+@import "jumbotron";
+@import "dropdown";
+@import "navigation";
+@import "alert";
+@import "list-group";
+@import "tooltip";
+@import "button";
+@import "card";
+@import "pagination";
+@import "section";
+@import "footer";
+@import "tables";
+@import "form";

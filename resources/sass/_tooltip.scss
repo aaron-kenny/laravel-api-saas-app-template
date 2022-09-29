@@ -1,0 +1,101 @@
+.tooltip {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    font-size: .75rem;
+    word-wrap: break-word;
+    margin: 5px;
+    z-index: 1070;
+    &.show {
+        opacity: .95;
+    }
+    .arrow {
+        position: absolute;
+        display: block;
+        width: .8rem;
+        height: .4rem;
+        &::before {
+            position: absolute;
+            content: "";
+            border-color: transparent;
+            border-style: solid;
+        }
+    }
+}
+
+.bs-tooltip-top {
+    padding: .4rem 0;
+    .arrow {
+        bottom: 0;
+        &::before {
+            top: 0;
+            border-width: .4rem .4rem 0;
+            border-top-color: $dark-300;
+        }
+    }
+}
+
+.bs-tooltip-right {
+    padding: 0 .4rem;
+    .arrow {
+        left: 0;
+        width: .4rem;
+        height: .8rem;
+        &::before {
+            right: 0;
+            border-width: .4rem .4rem .4rem 0;
+            border-right-color: $dark-300;
+        }
+    }
+}
+
+.bs-tooltip-bottom {
+    padding: .4rem 0;
+    .arrow {
+        top: 0;
+        &::before {
+            bottom: 0;
+            border-width: 0 .4rem .4rem;
+            border-bottom-color: $dark-300;
+        }
+    }
+}
+
+.bs-tooltip-left {
+    padding: 0 .4rem;
+    .arrow {
+        right: 0;
+        width: .4rem;
+        height: .8rem;
+        &::before {
+            left: 0;
+            border-width: .4rem 0 .4rem .4rem;
+            border-left-color: $dark-300;
+        }
+    }
+}
+
+.bs-tooltip-auto {
+    &[x-placement^="top"] {
+        @extend .bs-tooltip-top;
+    }
+    &[x-placement^="right"] {
+        @extend .bs-tooltip-right;
+    }
+    &[x-placement^="bottom"] {
+        @extend .bs-tooltip-bottom;
+    }
+    &[x-placement^="left"] {
+        @extend .bs-tooltip-left;
+    }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  max-width: 200px;
+  padding: .35rem 1rem;
+  color: $light-300;
+  text-align: center;
+  background-color: $dark-300;
+  border-radius: 4px;
+}

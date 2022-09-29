@@ -1,0 +1,21 @@
+.page {
+    transition: margin 300ms ease;
+    @include media-breakpoint-up(lg) {
+        margin-left: 270px;
+    }
+}
+
+.page__header {
+    padding: 10px 0;
+    .navigation__open {
+        font-size: 26px;
+    }
+}
+
+.page__title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #262626;
+    margin-bottom: 1rem;
+}

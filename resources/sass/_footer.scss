@@ -1,0 +1,48 @@
+.footer--app {
+    border-top: 1px solid lighten($dark-100, 10%);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .footer__social-icon {
+        font-size: 28px;
+        margin-right: 10px;
+        transition: all 150ms ease;
+        &:hover {
+            color: #fff;
+        }
+    }
+    .footer__link {
+        margin-right: 10px;
+    }
+    .footer__copyright {
+        margin-bottom: 0;
+    }
+}
+
+.footer--web {
+    background-color: #1d1d1d;
+    padding: 100px 0;
+    .footer__logo {
+        max-height: 40px;
+    }
+    .footer__copyright {
+        padding-top: 10px;
+    }
+    .footer__social-icon-container {
+        margin-bottom: 25px;
+    }
+    .footer__social-icon {
+        font-size: 28px;
+        margin-right: 10px;
+        transition: all 150ms ease;
+        &:hover {
+            color: #fff;
+        }
+    }
+    .footer__title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .footer__link {
+        margin-bottom: 2px;
+    }
+}

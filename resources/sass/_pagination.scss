@@ -1,0 +1,19 @@
+.pagination {
+    .page-numbers {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: #1f1f1f;
+        text-align: center;
+        line-height: 30px;
+        &:hover {
+            background: #202020;
+        }
+    }
+    .page-numbers:not(:last-child) {
+        margin-right: 5px;
+    }
+    .page-numbers.current {
+        background: #171717 !important;
+    }
+}

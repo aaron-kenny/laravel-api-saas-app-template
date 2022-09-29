@@ -1,0 +1,38 @@
+apiVersion: skaffold/v2beta12
+kind: Config
+build:
+  local:
+    push: false
+  artifacts:
+  - image: laravel-product-two
+    context: .
+    docker:
+      dockerfile: Dockerfile
+      buildArgs:
+        COMPOSER_OPTIONS: '--no-scripts --no-progress --ignore-platform-reqs'
+    sync:
+      manual:
+      - src: '**/*'
+        dest: /var/www/html
+deploy:
+  kubeContext: docker-desktop
+  kubectl:
+    manifests:
+    - ../laravel-product-two-env/kubernetes/dev/*.yaml
+profiles:
+- name: prod
+  build:
+    local:
+      push: true
+    artifacts:
+    - image: INSERT_PATH_TO_REPO/laravel-product-two
+      context: .
+      docker:
+        dockerfile: Dockerfile
+        buildArgs:
+          COMPOSER_OPTIONS: '--no-dev --no-scripts --no-progress --ignore-platform-reqs --optimize-autoloader'
+  deploy:
+    kubeContext: INSERT_KUBE_CONTEXT
+    kubectl:
+      manifests:
+      - ../laravel-product-two-env/kubernetes/prod/*.yaml

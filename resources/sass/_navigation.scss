@@ -1,0 +1,70 @@
+.navigation--app {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 100%;
+    background-color: $bg-nav;
+    padding-bottom: 60px;
+    overflow-y: auto;
+    transform: translate3d(-270px, 0, 0);
+    transition: all 300ms ease;
+    z-index: 1031;
+    .navigation__logo-container {
+        padding: 30px 20px;
+    }
+    .navigation__logo {
+        max-height: 40px;
+    }
+    .navigation__close {
+        float: right;
+        font-size: 24px;
+    }
+    .navigation__menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .navigation__menu-link {
+        display: block;
+        padding: 10px 20px;
+        &:hover {
+            background-color: #1f1f1f;
+        }
+    }
+    &.is-visible {
+        transform: translate3d(0, 0, 0);
+    }
+    @include media-breakpoint-up(lg) {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.navigation__overlay {
+    position: absolute;
+    background: rgba(29, 29, 29, 0);
+    z-index: 900;
+    &.is-visible {
+        background: rgba(29, 29, 29, 0.85);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.navigation--avatar {
+    .navigation__menu {
+        padding: 0;
+        margin: 0;
+    }
+    .navigation__avatar-link {
+        display: inline-block;
+    }
+    .navigation__avatar {
+        width: 32px;
+        height: auto;
+        max-width: 100%;
+        border-radius: 50%;
+    }
+}
